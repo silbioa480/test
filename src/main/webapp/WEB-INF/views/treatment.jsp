@@ -32,7 +32,7 @@
 	    	localstream=stream;
 	    	video.onloadedmetadata=function(e){
 				video.play();
-				let ws_cam=new WebSocket("ws://localhost:8090/WebSocketCam");
+				let ws_cam=new WebSocket("wss://test1-jh.herokuapp.com//WebSocketCam");
 				ws_cam.binaryType="arraybuffer";//중요!!!
 				ws_cam.onopen=function(){
 					console.log("cam con ok");
@@ -74,7 +74,7 @@
 		});
 		
 
-		let ws=new WebSocket("ws://localhost:8090/WebSocketChat");
+		let ws=new WebSocket("wss://test1-jh.herokuapp.com//WebSocketChat");
 		ws.onopen=function(){
 			console.log("con ok");
 		}
